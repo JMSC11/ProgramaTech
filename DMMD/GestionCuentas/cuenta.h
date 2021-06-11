@@ -1,5 +1,6 @@
 //Clase Cuenta
-
+#include <iostream>
+#include <string>
 class cuenta{
     private:
         int id;
