@@ -17,16 +17,13 @@ class cuenta{
         cuenta();
         cuenta(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, double telefono);
         ~cuenta();
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
+
+
         void mostrarCuenta();
-=======
-=======
->>>>>>> 4bb31a724c7bcb5ec0466a3b154e582f07aadbc1
+
         void mostrarC();
 
->>>>>>> 8cbc14f3cfb61de5b6f041d304163c4654b1efcf
+
         int getId();
         void setId(int id);
 
@@ -56,8 +53,7 @@ cuenta::cuenta(){
 
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 cuenta::cuenta(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, int telefono){
         cuenta::id = id;
         cuenta::usuario = usuario;
@@ -67,14 +63,10 @@ cuenta::cuenta(int id, string usuario, string password, string nombre, string ti
         cuenta::edad = edad;
         cuenta::correo = correo;
         cuenta::telefono = telefono;
-=======
 cuenta::~cuenta(){
 
->>>>>>> 8cbc14f3cfb61de5b6f041d304163c4654b1efcf
-=======
 cuenta::~cuenta(){
 
->>>>>>> 4bb31a724c7bcb5ec0466a3b154e582f07aadbc1
 }
 
 cuenta::cuenta(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, double telefono)
@@ -93,7 +85,7 @@ void cuenta::mostrarC()
 {
     cout << cuenta::id << " ";
     cout << cuenta::nombre << endl;
-    
+
 }
 
 void cuenta::mostrarCuenta(){
