@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
-//Clase base, la cual hereda a c_especialista, c_administrador, c_usuario, c_empresa
+
 class cuenta{
     private:
         int id;
@@ -12,11 +12,12 @@ class cuenta{
         string tipoCuenta;
         int edad;
         string correo;
-        int telefono;
+        double telefono;
     public:
         cuenta();
-        cuenta(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, int telefono);
+        cuenta(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, double telefono);
         ~cuenta();
+        void mostrarC();
 
         int getId();
         void setId(int id);
@@ -40,25 +41,34 @@ class cuenta{
         void setCorreo(string correo);
 
         int getTelefono();
-        void setTelefono(int telefono);
+        void setTelefono(double telefono);
 };
+
 cuenta::cuenta(){
 
 }
 
-cuenta::cuenta(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, int telefono){
-        id = id;
-        usuario = usuario;
-        password = password;
-        nombre = nombre;
-        tipoCuenta = tipoCuenta;
-        edad = edad;
-        correo = correo;
-        telefono = telefono;
-}
-
 cuenta::~cuenta(){
 
+}
+
+cuenta::cuenta(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, double telefono)
+{
+    cuenta::id = id;
+    cuenta::usuario = usuario;
+    cuenta::password = password;
+    cuenta::nombre = nombre;
+    cuenta::tipoCuenta = tipoCuenta;
+    cuenta::edad = edad;
+    cuenta::correo = correo;
+    cuenta::telefono = telefono;
+}
+
+void cuenta::mostrarC()
+{
+    cout << cuenta::id << " ";
+    cout << cuenta::nombre << endl;
+    
 }
 
 int cuenta::getId(){
@@ -113,6 +123,6 @@ void cuenta::setCorreo(string correo){
 int cuenta::getTelefono(){
         return telefono;
 }
-void cuenta::setTelefono(int telefono){
+void cuenta::setTelefono(double telefono){
         telefono = telefono;
 };

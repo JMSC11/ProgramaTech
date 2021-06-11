@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-clas GUI_PRINCIPAL {
+class GUI_PRINCIPAL {
 private:
     int opcion;//NUEVO ATRIBUTO
 public: 
