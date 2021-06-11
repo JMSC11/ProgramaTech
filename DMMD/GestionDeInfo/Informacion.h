@@ -15,13 +15,10 @@ Informacion::Informacion(){
 }
 
 void Informacion::modificarInfo(cuenta *cuenta_actual){
-    if (*cuenta_actual==usuario)
-    {
         cout<<"Los datos iniciales son:"<<endl;
         cuenta_actual->getDatos();
         cout<<"Correguimos datos:"<<endl;
         cuenta_actual->setDatos();
-    }
 }
 
 void Informacion::verInfo(cuenta *cuenta_actual){
