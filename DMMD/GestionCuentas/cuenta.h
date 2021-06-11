@@ -14,4 +14,5 @@ class cuenta{
         int telefono;
     public:
         cuenta();
+        ~cuenta();
 };
