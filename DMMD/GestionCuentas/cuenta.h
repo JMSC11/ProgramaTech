@@ -13,5 +13,5 @@ class cuenta{
         string correo;
         int telefono;
     public:
-    
+        cuenta();
 };
