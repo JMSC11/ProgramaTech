@@ -17,14 +17,15 @@ class cuenta{
         cuenta();
         cuenta(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, int telefono);
         ~cuenta();
-
+        
+        void mostrarCuenta();
         int getId();
         void setId(int id);
 
         string getUsuario();
         void setUsuario(string usuario);
 
-        string getPasswword();
+        string getPassword();
         void setPassword(string password);
 
         string getNombre();
@@ -47,72 +48,84 @@ cuenta::cuenta(){
 }
 
 cuenta::cuenta(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, int telefono){
-        id = id;
-        usuario = usuario;
-        password = password;
-        nombre = nombre;
-        tipoCuenta = tipoCuenta;
-        edad = edad;
-        correo = correo;
-        telefono = telefono;
+        cuenta::id = id;
+        cuenta::usuario = usuario;
+        cuenta::password = password;
+        cuenta::nombre = nombre;
+        cuenta::tipoCuenta = tipoCuenta;
+        cuenta::edad = edad;
+        cuenta::correo = correo;
+        cuenta::telefono = telefono;
 }
 
 cuenta::~cuenta(){
 
 }
 
+void cuenta::mostrarCuenta(){
+    cout << cuenta::id << endl;
+    cout << cuenta::usuario << endl;
+    cout << cuenta::password << endl;
+    cout << cuenta::nombre << endl;
+    cout << cuenta::tipoCuenta << endl;
+    cout << cuenta::edad << endl;
+    cout << cuenta::correo << endl;
+    cout << cuenta::telefono << endl;
+}
+
+
 int cuenta::getId(){
         return id;
 }
 void cuenta::setId(int id){
-        id = id;
+        cuenta::id = id;
 }
 
 string cuenta::getUsuario(){
        return usuario;
 }
 void cuenta::setUsuario(string usuario){
-        usuario = usuario;
+        cuenta::usuario = usuario;
 }
 
-string cuenta::getPasswword(){
+string cuenta::getPassword(){
        return password;
 }
 void cuenta::setPassword(string password){
-        password = password;
+        cuenta::password = password;
 }
 
 string cuenta::getNombre(){
        return nombre;
 }
 void cuenta::setNombre(string nombre){
-        nombre = nombre;
+        cuenta::nombre = nombre;
 }
 
 string cuenta::gettipoCuenta(){
        return tipoCuenta;
 }
 void cuenta::settipoCuenta(string tipoCuenta){
-        tipoCuenta = tipoCuenta;
+        cuenta::tipoCuenta = tipoCuenta;
 }
 
 int cuenta::getEdad(){
         return edad;
 }
 void cuenta::setEdad(int edad){
-        edad = edad;
+        cuenta::edad = edad;
 }
 
 string cuenta::getCorreo(){
        return correo;
 }
 void cuenta::setCorreo(string correo){
-        correo = correo;
+        cuenta::correo = correo;
 }
 
 int cuenta::getTelefono(){
         return telefono;
 }
 void cuenta::setTelefono(int telefono){
-        telefono = telefono;
+        cuenta::telefono = telefono;
 };
