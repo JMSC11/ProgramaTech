@@ -1,6 +1,7 @@
 //Clase Cuenta
 #include <iostream>
 #include <string>
+using namespace std;
 class cuenta{
     private:
         int id;
