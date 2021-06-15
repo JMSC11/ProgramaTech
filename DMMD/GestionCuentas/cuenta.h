@@ -77,14 +77,14 @@ void cuenta::mostrarC() //Mostrar Contacto
 }
 
 void cuenta::mostrarCuenta(){
-    cout << cuenta::id << endl;
-    cout << cuenta::usuario << endl;
-    cout << cuenta::password << endl;
-    cout << cuenta::nombre << endl;
-    cout << cuenta::tipoCuenta << endl;
-    cout << cuenta::edad << endl;
-    cout << cuenta::correo << endl;
-    cout << cuenta::telefono << endl << endl;
+    cout << "ID: " << cuenta::id << endl;
+    cout << "Usuario: "<< cuenta::usuario << endl;
+    //cout << cuenta::password << endl;
+    cout << "Nombre:  " << cuenta::nombre << endl;
+    cout << "Tipo de cuenta: " << cuenta::tipoCuenta << endl;
+    cout << "Edad: " << cuenta::edad << endl;
+    cout << "Correo: " << cuenta::correo << endl;
+    cout << "Telefono: " << cuenta::telefono << endl << endl;
 }
 
 

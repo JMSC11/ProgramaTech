@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <string>
 #include "GUI_PRINCIPAL.h"
-//#include "GestionDeAutenticacion/GUI_ADMINISTRADOR.h"
-//#include "GestionCuentas\ListaDeCuentas.h"
 #include "GestionDeAutenticacion\Autenticacion.h"
 
 using namespace std;
@@ -80,6 +78,7 @@ int main() {
                                     cout << "6: Obtener total de cuentas" << endl;
                                     cin >> opcion_menu_admin;
                                     if(opcion_menu_admin == 4){
+                                        cout << "\n\t---- Lista de cuentas ----" << endl;
                                         lista_cuentas.mostrar("1");
                                     }
                                 break;
@@ -108,7 +107,7 @@ int main() {
                 else
                 {
                     system("cls");
-                    cout <<endl<< "INICIO DE SESION NOOOOOOOOO EXITOSO";
+                    cout <<endl<< "INICIO DE SESION SIN EXITO" << endl;
                     system("pause");
                 }
             break;
