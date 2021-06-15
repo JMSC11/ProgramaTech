@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include <string>
 #include "GUI_PRINCIPAL.h"
-//#include "GestionDeAutenticacion/GUI_ADMINISTRADOR.h"
-//#include "GestionCuentas\ListaDeCuentas.h"
 #include "GestionDeAutenticacion\Autenticacion.h"
 
 using namespace std;
@@ -80,6 +78,7 @@ int main() {
                                     cout << "6: Obtener total de cuentas" << endl;
                                     cin >> opcion_menu_admin;
                                     if(opcion_menu_admin == 4){
+                                        cout << "\n\t---- Lista de cuentas ----" << endl;
                                         lista_cuentas.mostrar("1");
                                     }
                                 break;
@@ -108,7 +107,7 @@ int main() {
                 else
                 {
                     system("cls");
-                    cout <<endl<< "INICIO DE SESION NOOOOOOOOO EXITOSO";
+                    cout <<endl<< "INICIO DE SESION SIN EXITO" << endl;
                     system("pause");
                 }
             break;
@@ -132,12 +131,12 @@ int main() {
 
 
 void agregarAdministradores(ListaDeCuentas &lista_cuentas){
-    cuenta *c = new cuenta (1,"Daniel21", "Prueba21", "Daniel Caparroso Gutierrez", "4", 22, "2193035668@cua.uam.mx", 5587650318);
+    cuenta *c = new cuenta (1,"Daniel21", "Prueba21", "Daniel Caparroso Gutierrez", "4", 22, "2193035668@cua.uam.mx", "5587650318");
     lista_cuentas.registrar(c);
-    c = new cuenta (2,"Misael", "0000", "Misael Solano Contreras", "4", 22, "2193037862@cua.uam.mx", 5698647810);
+    c = new cuenta (2,"Misael", "0000", "Misael Solano Contreras", "4", 22, "2193037862@cua.uam.mx", "5698647810");
     lista_cuentas.registrar(c);
-    c = new cuenta (3,"Mau", "1111", "Mauricio Estrada Soto", "4", 20, "2193039825@cua.uam.mx", 5586033492);
+    c = new cuenta (3,"Mau", "1111", "Mauricio Estrada Soto", "4", 20, "2193039825@cua.uam.mx", "5586033492");
     lista_cuentas.registrar(c);
-    c = new cuenta (4,"DiegoV", "Prueba", "Diego Uriel Vazquez Ramirez", "4", 20, "2193036227@cua.uam.mx", 5574920392);
+    c = new cuenta (4,"DiegoV", "Prueba", "Diego Uriel Vazquez Ramirez", "4", 20, "2193036227@cua.uam.mx", "5574920392");
     lista_cuentas.registrar(c);
 }

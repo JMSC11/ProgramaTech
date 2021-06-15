@@ -12,10 +12,10 @@ class cuenta{
         string tipoCuenta;
         int edad;
         string correo;
-        double telefono;
+        string telefono;
     public:
         cuenta();
-        cuenta(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, double telefono);
+        cuenta(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, string telefono);
         ~cuenta();
 
 
@@ -45,8 +45,8 @@ class cuenta{
         string getCorreo();
         void setCorreo(string correo);
 
-        int getTelefono();
-        void setTelefono(double telefono);
+        string getTelefono();
+        void setTelefono(string telefono);
 };
 
 cuenta::cuenta(){
@@ -54,7 +54,7 @@ cuenta::cuenta(){
 }
 
 
-cuenta::cuenta(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, double telefono){
+cuenta::cuenta(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, string telefono){
         cuenta::id = id;
         cuenta::usuario = usuario;
         cuenta::password = password;
@@ -77,14 +77,14 @@ void cuenta::mostrarC() //Mostrar Contacto
 }
 
 void cuenta::mostrarCuenta(){
-    cout << cuenta::id << endl;
-    cout << cuenta::usuario << endl;
-    cout << cuenta::password << endl;
-    cout << cuenta::nombre << endl;
-    cout << cuenta::tipoCuenta << endl;
-    cout << cuenta::edad << endl;
-    cout << cuenta::correo << endl;
-    cout << cuenta::telefono << endl << endl;
+    cout << "ID: " << cuenta::id << endl;
+    cout << "Usuario: "<< cuenta::usuario << endl;
+    //cout << cuenta::password << endl;
+    cout << "Nombre:  " << cuenta::nombre << endl;
+    cout << "Tipo de cuenta: " << cuenta::tipoCuenta << endl;
+    cout << "Edad: " << cuenta::edad << endl;
+    cout << "Correo: " << cuenta::correo << endl;
+    cout << "Telefono: " << cuenta::telefono << endl << endl;
 }
 
 
@@ -137,10 +137,10 @@ void cuenta::setCorreo(string correo){
         cuenta::correo = correo;
 }
 
-int cuenta::getTelefono(){
+string cuenta::getTelefono(){
         return telefono;
 }
 
-void cuenta::setTelefono(double telefono){
+void cuenta::setTelefono(string telefono){
         telefono = telefono;
 };
