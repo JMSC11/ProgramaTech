@@ -2,6 +2,7 @@
 #include <conio.h>
 #include <stdlib.h>
 #include "..\GestionCuentas\ListaDeCuentas.h"
+#include "GUI_ADMINISTRADOR.h"
 using namespace std;
 #define ENTER 13
 #define ATRAS 8
@@ -12,10 +13,10 @@ public:
     Autenticacion();
     int iniciarSesion(ListaDeCuentas &lista);
     void registrarse(ListaDeCuentas &lista);
-    void GUI_EMPRESA();
-    void GUI_ADMINISTRADOR();
-    void GUI_USUARIO();
-    void GUI_ESPECIALISTA();
+    int GUI_empresa();
+    int GUI_administrador();
+    int GUI_usuario();
+    int GUI_especialista();
 private:
 
 };
@@ -100,4 +101,19 @@ void Autenticacion::registrarse(ListaDeCuentas &lista)
     cuenta *c =  new cuenta(id, usuario, password, nombre, tipoCuenta, edad, correo, telefono);
     lista.registrar(c);
     system("pause");
+}
+
+int  Autenticacion::GUI_administrador(){
+    GUI_ADMINISTRADOR gui;
+    int op = gui.menuAdministrador(); 
+    return op;
+}
+int Autenticacion::GUI_empresa(){
+    return 0;
+}
+int Autenticacion::GUI_usuario(){
+    return 0;
+}
+int Autenticacion::GUI_especialista(){
+    return 0;
 }

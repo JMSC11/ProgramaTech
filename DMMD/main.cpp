@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string>
 #include "GUI_PRINCIPAL.h"
+//#include "GestionDeAutenticacion/GUI_ADMINISTRADOR.h"
 //#include "GestionCuentas\ListaDeCuentas.h"
 #include "GestionDeAutenticacion\Autenticacion.h"
 
@@ -21,6 +22,7 @@ int main() {
     do
     {
         opcion = Gui.menuPrincipal();
+        int opcion_menu, opcion_menu_admin;;
         //Autenticacion Aut2;
         Autenticacion Aut;
         estado_inicio=false;
@@ -42,18 +44,63 @@ int main() {
                     if (tipo_Cuenta=="1")
                     {
                         cout << "\t\t\tBienvenido usuario!" << endl;
+                        opcion_menu = Aut.GUI_usuario();
+                        
                     }
                     else if(tipo_Cuenta == "2")
                     {
                         cout << "\t\t\tBienvenido Empresa!" << endl;
+                        opcion_menu = Aut.GUI_empresa();
+                        
                     }
                     else if(tipo_Cuenta == "3")
                     {
                         cout << "\t\t\tBienvenido Especialista!" << endl;
+                        opcion_menu = Aut.GUI_especialista();
+                        
                     }
-                    else
+                    else;//tipo_cuenta == 4
                     {
                         cout << "\t\t\tBienvenido Administrador!" << endl;
+                        do{
+                            opcion_menu = Aut.GUI_administrador();
+                            switch(opcion_menu){
+                            
+                                case 1://Gestion de informacion
+                                    cout << "1: Modificar informacion" << endl;
+                                    cout << "2: Ver informacion" << endl;
+                                    cin >> opcion_menu_admin;
+                                break;
+                                case 2://Gestion de cuentas
+                                    cout << "1: Insertar" << endl;
+                                    cout << "2: Eliminar" << endl;
+                                    cout << "3: Modificar" << endl;
+                                    cout << "4: Visuzalir cuentas" << endl;
+                                    cout << "5: Buscar cuenta" << endl;
+                                    cout << "6: Obtener total de cuentas" << endl;
+                                    cin >> opcion_menu_admin;
+                                    if(opcion_menu_admin == 4){
+                                        lista_cuentas.mostrar("1");
+                                    }
+                                break;
+                                case 3://Gestion de agenda
+                                    cout << "1: Dar de alta" << endl;
+                                    cout << "2: Dar de baja" << endl;
+                                    cout << "3: Visualizar agenda" << endl;
+                                    cout << "4: Buscar especialista" << endl;
+                                    cin >> opcion_menu_admin;
+                                break;
+                                case 4://Gestion de publicaciones
+                                    cout << "1: Visualizar publicaciones" << endl;
+                                    cout << "2: Crear publicacion" << endl;
+                                    cout << "3: Seleccionar publicacion" << endl;
+                                    cout << "4: Eliminar publicacion" << endl;
+                                    cout << "5: Modificar publicacion" << endl;
+                                    cin >> opcion_menu_admin;
+                                break;
+                            }
+                        
+                        }while(opcion_menu < 5);
                     }
 
                     system("pause");
@@ -72,11 +119,17 @@ int main() {
         }
     }while(opcion!=3);
     system("cls");
-    lista_cuentas.mostrar("1");
-    cout << "Salida exitosa";
+    //lista_cuentas.mostrar("1");
+    cout << "Salida exitosa" << endl;
     system("pause");
     return 0;
 }
+
+
+
+
+
+
 
 void agregarAdministradores(ListaDeCuentas &lista_cuentas){
     cuenta *c = new cuenta (1,"Daniel21", "Prueba21", "Daniel Caparroso Gutierrez", "4", 22, "2193035668@cua.uam.mx", 5587650318);
