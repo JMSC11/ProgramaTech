@@ -62,7 +62,7 @@ cuenta::cuenta(int id, string usuario, string password, string nombre, string ti
         cuenta::tipoCuenta = tipoCuenta;
         cuenta::edad = edad;
         cuenta::correo = correo;
-        cuenta::telefono = telefono;
+        cuenta::telefono = telefono ;
 }
 
 cuenta::~cuenta(){
@@ -84,7 +84,7 @@ void cuenta::mostrarCuenta(){
     cout << cuenta::tipoCuenta << endl;
     cout << cuenta::edad << endl;
     cout << cuenta::correo << endl;
-    cout << cuenta::telefono << endl;
+    cout << cuenta::telefono << endl << endl;
 }
 
 

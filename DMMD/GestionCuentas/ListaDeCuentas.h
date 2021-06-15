@@ -8,12 +8,12 @@ private:
 public:
     ListaDeCuentas();
     void registrar(cuenta *c);
-    bool buscar(string usuario, string contrasena);
+    int buscar(string usuario, string contrasena);
     bool eliminar(cuenta c);
     bool modificar(cuenta *c);
     void mostrar(string tipoCuenta);
     int getNumCuentas();
-    void obtenerCuenta(string usuario, string contrasena, cuenta &c);
+    void obtenerCuenta(int id, cuenta &c);
 };
 
 
@@ -33,23 +33,29 @@ void ListaDeCuentas::registrar(cuenta *c){
 // 
 // Buscar es equivalente a iniciar sesion
 // 
-bool ListaDeCuentas::buscar(string usuario, string contrasena){
+int ListaDeCuentas::buscar(string usuario, string contrasena){
     bool existeCuenta = false;
     list<cuenta>::iterator it = listaCuentas.begin();
     int i = 0;
+    int x =0;
 
-    while(i < contCuentas && !existeCuenta){
+    while(x < contCuentas && !existeCuenta){
         cuenta c = *it;
         if(c.getUsuario() == usuario&&c.getPassword() == contrasena){
             existeCuenta = true;
+            i = it->getId();
             //d=listaCuentas.get_allocator().allocate(i);
             //system("pause");
         }
+        else
+        {
+            i=0;
+        }
         it++;
-        i++;
+        x++;
     }
     
-    return existeCuenta;
+    return i;
 }
 
 // 
@@ -79,13 +85,13 @@ int ListaDeCuentas::getNumCuentas()
     return contCuentas+1;
 }
 
-void ListaDeCuentas::obtenerCuenta(string usuario, string contrasena, cuenta &c){
+void ListaDeCuentas::obtenerCuenta(int id, cuenta &c){
     list<cuenta>::iterator it = listaCuentas.begin();
     int i = 0;
     bool existeCuenta = false;
 
-    while(i < contCuentas && !existeCuenta){
-        if(it->getUsuario() == usuario && it->getPassword() == contrasena){
+    while(i < contCuentas){
+        if(it->getId() == id){
                 existeCuenta = true;
                 c = *it;
                 //d=listaCuentas.get_allocator().allocate(i);
