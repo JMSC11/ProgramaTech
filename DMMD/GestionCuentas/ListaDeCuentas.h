@@ -8,11 +8,12 @@ private:
 public:
     ListaDeCuentas();
     void registrar(cuenta *c);
-    cuenta* buscar(string usuario, string contrasena);
+    int buscar(string usuario, string contrasena);
     bool eliminar(cuenta c);
     bool modificar(cuenta *c);
     void mostrar(string tipoCuenta);
     int getNumCuentas();
+    void obtenerCuenta(int id, cuenta &c);
 };
 
 
@@ -25,43 +26,36 @@ ListaDeCuentas::ListaDeCuentas(){
 
 void ListaDeCuentas::registrar(cuenta *c){
     listaCuentas.insert(listaCuentas.end(), *c);
-        
+    contCuentas++;    
 }
 
 
 // 
 // Buscar es equivalente a iniciar sesion
 // 
-cuenta* ListaDeCuentas::buscar(string usuario, string contrasena){
+int ListaDeCuentas::buscar(string usuario, string contrasena){
     bool existeCuenta = false;
     list<cuenta>::iterator it = listaCuentas.begin();
     int i = 0;
-    
-    cuenta c = *it;
-    cuenta *d;
+    int x =0;
 
-    while(i < contCuentas && !existeCuenta){
-        if(c.getUsuario() == usuario){
-            if(c.getPassword() == contrasena)
-            {
-                existeCuenta = true;
-                d=listaCuentas.get_allocator().allocate(i);
-                system("pause");
-            }
-            else
-            {
-                d=NULL;
-            }
+    while(x < contCuentas && !existeCuenta){
+        cuenta c = *it;
+        if(c.getUsuario() == usuario&&c.getPassword() == contrasena){
+            existeCuenta = true;
+            i = it->getId();
+            //d=listaCuentas.get_allocator().allocate(i);
+            //system("pause");
         }
         else
         {
-                d=NULL;
+            i=0;
         }
         it++;
-        i++;
+        x++;
     }
     
-    return d;
+    return i;
 }
 
 // 
@@ -89,4 +83,20 @@ void ListaDeCuentas::mostrar(string tipoCuenta){
 int ListaDeCuentas::getNumCuentas()
 {
     return contCuentas+1;
+}
+
+void ListaDeCuentas::obtenerCuenta(int id, cuenta &c){
+    list<cuenta>::iterator it = listaCuentas.begin();
+    int i = 0;
+    bool existeCuenta = false;
+
+    while(i < contCuentas){
+        if(it->getId() == id){
+                existeCuenta = true;
+                c = *it;
+                //d=listaCuentas.get_allocator().allocate(i);
+        }     
+        it++;
+        i++;
+    }
 }

@@ -10,7 +10,7 @@ using namespace std;
 class Autenticacion {
 public:
     Autenticacion();
-    cuenta* iniciarSesion(ListaDeCuentas &lista);
+    int iniciarSesion(ListaDeCuentas &lista);
     void registrarse(ListaDeCuentas &lista);
     void GUI_EMPRESA();
     void GUI_ADMINISTRADOR();
@@ -30,9 +30,9 @@ Autenticacion::Autenticacion() {
 //
 // Iniciar Sesion
 //
-cuenta* Autenticacion::iniciarSesion(ListaDeCuentas &lista) {
+int Autenticacion::iniciarSesion(ListaDeCuentas &lista) {
     bool estado_inicio = false;
-    cuenta *c;
+    int id;
     string usuario, password;
     system ("cls");
     cout << "\t\t\tLOGIN DE USUARIO" << endl;
@@ -63,8 +63,9 @@ cuenta* Autenticacion::iniciarSesion(ListaDeCuentas &lista) {
         }
     caracter = getch();
     }
-    c = lista.buscar(usuario, password);
-    return c;
+    id = lista.buscar(usuario, password);
+
+    return id;
 }
 
 void Autenticacion::registrarse(ListaDeCuentas &lista)
@@ -75,7 +76,15 @@ void Autenticacion::registrarse(ListaDeCuentas &lista)
     int id = lista.getNumCuentas(); //OBTENEMOS UN ID DISPONIBLE PARA ASIGNAR A LA CUENTA.
     system("cls");
     cin.ignore();
-    cout << "\t\tTipo de cuenta Usuario\n\t\tFavor de ingresar los siguientes datos:" << endl;
+    
+    cout << "Seleccione un tipo de cuenta" << endl;
+    cout << "1: Usuario normal" << endl;
+    cout << "2: Empresa" << endl;
+    cout << "3: Especialista" << endl;
+
+    getline(cin,tipoCuenta);
+    system("cls");
+    cout << "\t\tFavor de ingresar los siguientes datos:" << endl;
     cout << "Usuario: ";
     getline(cin,usuario);
     cout << "\nContrase\244a: ";
@@ -88,8 +97,7 @@ void Autenticacion::registrarse(ListaDeCuentas &lista)
     cin >> correo;
     cout << "\nTelefono: ";
     cin >>telefono;
-    cuenta *c =  new cuenta(id, usuario, password, nombre, "1", edad, correo, telefono);
+    cuenta *c =  new cuenta(id, usuario, password, nombre, tipoCuenta, edad, correo, telefono);
     lista.registrar(c);
     system("pause");
-
 }
