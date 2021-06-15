@@ -24,7 +24,7 @@ int GUI_PRINCIPAL::menuPrincipal(){
         cout << "Elige una opcion: "<<endl;
         cout << "1: Iniciar sesion"<<endl;
         cout << "2: Registrarse" << endl;
-        cout << "3: Salir";
+        cout << "3: Salir" << endl;
         cin >> opcion;
     }while(opcion>3 && opcion<1);
     return opcion;

@@ -10,15 +10,17 @@ int main() {
     ListaDeCuentas lista_cuentas;
     bool estado_inicio;
     cuenta *cuenta_actual;
-    Autenticacion Aut;
+    //Autenticacion Aut;
     GUI_PRINCIPAL Gui;
-    int opcion, cuentaID;
+    int opcion;
     do
     {
         opcion = Gui.menuPrincipal();
+        Autenticacion Aut2;
+        Autenticacion Aut;
         switch(opcion)
-        {
-            case 1:
+        {    
+            case 1: 
                 cuenta_actual=Aut.iniciarSesion(lista_cuentas);
                 if (cuenta_actual!=NULL)
                 {
@@ -29,18 +31,20 @@ int main() {
                 }
                 else
                 {
+                    system("cls");
                     cout <<endl<< "INICIO DE SESION NOOOOOOOOO EXITOSO";
                     system("pause");
                 }
             break;
             case 2:
-                Aut.registrarse(lista_cuentas);
+                
+                Aut2.registrarse(lista_cuentas);
             break;  
         }
     }while(opcion!=3);
     system("cls");
-    cout << "La lista consiste de: " << endl;
     lista_cuentas.mostrar("1");
     cout << "Salida exitosa";
+    system("pause");
     return 0;
 }

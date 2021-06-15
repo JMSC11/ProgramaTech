@@ -25,7 +25,7 @@ ListaDeCuentas::ListaDeCuentas(){
 
 void ListaDeCuentas::registrar(cuenta *c){
     listaCuentas.insert(listaCuentas.end(), *c);
-        
+    contCuentas++;    
 }
 
 
@@ -37,10 +37,11 @@ cuenta* ListaDeCuentas::buscar(string usuario, string contrasena){
     list<cuenta>::iterator it = listaCuentas.begin();
     int i = 0;
     
-    cuenta c = *it;
-    cuenta *d;
+    
+    cuenta *d = NULL;
 
     while(i < contCuentas && !existeCuenta){
+        cuenta c = *it;
         if(c.getUsuario() == usuario){
             if(c.getPassword() == contrasena)
             {
@@ -55,8 +56,12 @@ cuenta* ListaDeCuentas::buscar(string usuario, string contrasena){
         }
         else
         {
-                d=NULL;
+            d=NULL;
         }
+        cout << "User: " << c.getUsuario() << endl;
+        cout << "Pass: " << c.getPassword() << endl;
+        system("pause");
+        
         it++;
         i++;
     }
