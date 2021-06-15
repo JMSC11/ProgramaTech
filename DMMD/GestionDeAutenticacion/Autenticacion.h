@@ -72,7 +72,7 @@ int Autenticacion::iniciarSesion(ListaDeCuentas &lista) {
 void Autenticacion::registrarse(ListaDeCuentas &lista)
 {
     int edad;
-    double telefono;
+    string telefono;
     string nombre, tipoCuenta, correo, usuario, password;
     int id = lista.getNumCuentas(); //OBTENEMOS UN ID DISPONIBLE PARA ASIGNAR A LA CUENTA.
     system("cls");

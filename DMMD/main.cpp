@@ -132,12 +132,12 @@ int main() {
 
 
 void agregarAdministradores(ListaDeCuentas &lista_cuentas){
-    cuenta *c = new cuenta (1,"Daniel21", "Prueba21", "Daniel Caparroso Gutierrez", "4", 22, "2193035668@cua.uam.mx", 5587650318);
+    cuenta *c = new cuenta (1,"Daniel21", "Prueba21", "Daniel Caparroso Gutierrez", "4", 22, "2193035668@cua.uam.mx", "5587650318");
     lista_cuentas.registrar(c);
-    c = new cuenta (2,"Misael", "0000", "Misael Solano Contreras", "4", 22, "2193037862@cua.uam.mx", 5698647810);
+    c = new cuenta (2,"Misael", "0000", "Misael Solano Contreras", "4", 22, "2193037862@cua.uam.mx", "5698647810");
     lista_cuentas.registrar(c);
-    c = new cuenta (3,"Mau", "1111", "Mauricio Estrada Soto", "4", 20, "2193039825@cua.uam.mx", 5586033492);
+    c = new cuenta (3,"Mau", "1111", "Mauricio Estrada Soto", "4", 20, "2193039825@cua.uam.mx", "5586033492");
     lista_cuentas.registrar(c);
-    c = new cuenta (4,"DiegoV", "Prueba", "Diego Uriel Vazquez Ramirez", "4", 20, "2193036227@cua.uam.mx", 5574920392);
+    c = new cuenta (4,"DiegoV", "Prueba", "Diego Uriel Vazquez Ramirez", "4", 20, "2193036227@cua.uam.mx", "5574920392");
     lista_cuentas.registrar(c);
 }
