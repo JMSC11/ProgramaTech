@@ -24,6 +24,7 @@ ListaDeCuentas::ListaDeCuentas(){
 
 void ListaDeCuentas::registrar(cuenta *c){
     listaCuentas.insert(listaCuentas.end(), *c);
+    contCuentas++;
 }
 
 

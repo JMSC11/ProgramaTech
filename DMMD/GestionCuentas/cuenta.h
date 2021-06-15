@@ -140,14 +140,7 @@ void cuenta::setCorreo(string correo){
 int cuenta::getTelefono(){
         return telefono;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-void cuenta::setTelefono(int telefono){
-        cuenta::telefono = telefono;
-=======
-=======
->>>>>>> 4bb31a724c7bcb5ec0466a3b154e582f07aadbc1
+
 void cuenta::setTelefono(double telefono){
         telefono = telefono;
->>>>>>> 8cbc14f3cfb61de5b6f041d304163c4654b1efcf
 };
