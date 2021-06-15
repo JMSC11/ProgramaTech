@@ -11,7 +11,7 @@ using namespace std;
 class GUI_PRINCIPAL {
 private:
     int opcion;//NUEVO ATRIBUTO
-public: 
+public:
     GUI_PRINCIPAL();
     int menuPrincipal();
 };
@@ -19,10 +19,10 @@ public:
 GUI_PRINCIPAL::GUI_PRINCIPAL(){
 
 }
-// 
+//
 // Menu principal del sistema
 // Permite iniciar sesion o registrarse
-// 
+//
 int GUI_PRINCIPAL::menuPrincipal(){
     string usuario, password, contra;
     int contador = 0;
@@ -34,7 +34,7 @@ int GUI_PRINCIPAL::menuPrincipal(){
 
     do
     {
-        
+
         system("cls");
         cout << "Eliga la opcion del menu a continuacion \n1. Iniciar sesion\n2. Registrarse\n3. Salir" << endl;
         cin >> menuP;
