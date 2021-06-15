@@ -54,7 +54,7 @@ cuenta::cuenta(){
 }
 
 
-cuenta::cuenta(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, int telefono){
+cuenta::cuenta(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, double telefono){
         cuenta::id = id;
         cuenta::usuario = usuario;
         cuenta::password = password;
@@ -63,22 +63,10 @@ cuenta::cuenta(int id, string usuario, string password, string nombre, string ti
         cuenta::edad = edad;
         cuenta::correo = correo;
         cuenta::telefono = telefono;
-cuenta::~cuenta(){
-
-cuenta::~cuenta(){
-
 }
 
-cuenta::cuenta(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, double telefono)
-{
-    cuenta::id = id;
-    cuenta::usuario = usuario;
-    cuenta::password = password;
-    cuenta::nombre = nombre;
-    cuenta::tipoCuenta = tipoCuenta;
-    cuenta::edad = edad;
-    cuenta::correo = correo;
-    cuenta::telefono = telefono;
+cuenta::~cuenta(){
+
 }
 
 void cuenta::mostrarC()
