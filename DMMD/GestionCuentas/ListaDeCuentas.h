@@ -8,11 +8,12 @@ private:
 public:
     ListaDeCuentas();
     void registrar(cuenta *c);
-    cuenta* buscar(string usuario, string contrasena);
+    bool buscar(string usuario, string contrasena);
     bool eliminar(cuenta c);
     bool modificar(cuenta *c);
     void mostrar(string tipoCuenta);
     int getNumCuentas();
+    void obtenerCuenta(string usuario, string contrasena, cuenta &c);
 };
 
 
@@ -32,41 +33,23 @@ void ListaDeCuentas::registrar(cuenta *c){
 // 
 // Buscar es equivalente a iniciar sesion
 // 
-cuenta* ListaDeCuentas::buscar(string usuario, string contrasena){
+bool ListaDeCuentas::buscar(string usuario, string contrasena){
     bool existeCuenta = false;
     list<cuenta>::iterator it = listaCuentas.begin();
     int i = 0;
-    
-    
-    cuenta *d = NULL;
 
     while(i < contCuentas && !existeCuenta){
         cuenta c = *it;
-        if(c.getUsuario() == usuario){
-            if(c.getPassword() == contrasena)
-            {
-                existeCuenta = true;
-                d=listaCuentas.get_allocator().allocate(i);
-                system("pause");
-            }
-            else
-            {
-                d=NULL;
-            }
+        if(c.getUsuario() == usuario&&c.getPassword() == contrasena){
+            existeCuenta = true;
+            //d=listaCuentas.get_allocator().allocate(i);
+            //system("pause");
         }
-        else
-        {
-            d=NULL;
-        }
-        cout << "User: " << c.getUsuario() << endl;
-        cout << "Pass: " << c.getPassword() << endl;
-        system("pause");
-        
         it++;
         i++;
     }
     
-    return d;
+    return existeCuenta;
 }
 
 // 
@@ -94,4 +77,20 @@ void ListaDeCuentas::mostrar(string tipoCuenta){
 int ListaDeCuentas::getNumCuentas()
 {
     return contCuentas+1;
+}
+
+void ListaDeCuentas::obtenerCuenta(string usuario, string contrasena, cuenta &c){
+    list<cuenta>::iterator it = listaCuentas.begin();
+    int i = 0;
+    bool existeCuenta = false;
+
+    while(i < contCuentas && !existeCuenta){
+        if(it->getUsuario() == usuario && it->getPassword() == contrasena){
+                existeCuenta = true;
+                c = *it;
+                //d=listaCuentas.get_allocator().allocate(i);
+        }     
+        it++;
+        i++;
+    }
 }

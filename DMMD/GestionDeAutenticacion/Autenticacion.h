@@ -10,7 +10,7 @@ using namespace std;
 class Autenticacion {
 public:
     Autenticacion();
-    cuenta* iniciarSesion(ListaDeCuentas &lista);
+    bool iniciarSesion(ListaDeCuentas &lista);
     void registrarse(ListaDeCuentas &lista);
     void GUI_EMPRESA();
     void GUI_ADMINISTRADOR();
@@ -30,9 +30,8 @@ Autenticacion::Autenticacion() {
 //
 // Iniciar Sesion
 //
-cuenta* Autenticacion::iniciarSesion(ListaDeCuentas &lista) {
+bool Autenticacion::iniciarSesion(ListaDeCuentas &lista) {
     bool estado_inicio = false;
-    cuenta *c;
     string usuario, password;
     system ("cls");
     cout << "\t\t\tLOGIN DE USUARIO" << endl;
@@ -63,8 +62,9 @@ cuenta* Autenticacion::iniciarSesion(ListaDeCuentas &lista) {
         }
     caracter = getch();
     }
-    c = lista.buscar(usuario, password);
-    return c;
+    estado_inicio = lista.buscar(usuario, password);
+
+    return estado_inicio;
 }
 
 void Autenticacion::registrarse(ListaDeCuentas &lista)

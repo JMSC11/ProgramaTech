@@ -8,25 +8,28 @@ using namespace std;
 
 int main() {
     ListaDeCuentas lista_cuentas;
-    bool estado_inicio;
-    cuenta *cuenta_actual;
+    bool estado_inicio=false;
+    cuenta cuenta_actual;
     //Autenticacion Aut;
     GUI_PRINCIPAL Gui;
     int opcion;
     do
     {
         opcion = Gui.menuPrincipal();
-        Autenticacion Aut2;
+        //Autenticacion Aut2;
         Autenticacion Aut;
+        estado_inicio=false;
         switch(opcion)
         {    
             case 1: 
-                cuenta_actual=Aut.iniciarSesion(lista_cuentas);
-                if (cuenta_actual!=NULL)
+                estado_inicio=Aut.iniciarSesion(lista_cuentas);
+                if (estado_inicio)
                 {
                     system("cls");
-                    estado_inicio=true;
-                    cout << "INICIO DE SESION EXITOSO";
+                    //estado_inicio=true;
+                    cout << "INICIO DE SESION EXITOSO" << endl;
+                    lista_cuentas.obtenerCuenta("DiegoV", "Prueba", cuenta_actual);
+                    cuenta_actual.mostrarCuenta();
                     system("pause");
                 }
                 else
@@ -38,7 +41,7 @@ int main() {
             break;
             case 2:
                 
-                Aut2.registrarse(lista_cuentas);
+                Aut.registrarse(lista_cuentas);
             break;  
         }
     }while(opcion!=3);

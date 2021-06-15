@@ -69,7 +69,7 @@ cuenta::~cuenta(){
 
 }
 
-void cuenta::mostrarC()
+void cuenta::mostrarC() //Mostrar Contacto
 {
     cout << cuenta::id << " ";
     cout << cuenta::nombre << endl;
