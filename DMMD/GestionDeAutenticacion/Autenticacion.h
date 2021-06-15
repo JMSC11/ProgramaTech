@@ -3,6 +3,9 @@
 #include <stdlib.h>
 #include "..\GestionCuentas\ListaDeCuentas.h"
 #include "GUI_ADMINISTRADOR.h"
+#include "GUI_USUARIO.h"
+#include "GUI_ESPECIALISTA.h"
+#include "GUI_EMPRESA.h"
 using namespace std;
 #define ENTER 13
 #define ATRAS 8
@@ -109,11 +112,17 @@ int  Autenticacion::GUI_administrador(){
     return op;
 }
 int Autenticacion::GUI_empresa(){
-    return 0;
+    GUI_EMPRESA gui;
+    int op = gui.menuEmpresa(); 
+    return op;
 }
 int Autenticacion::GUI_usuario(){
-    return 0;
+    GUI_USUARIO gui;
+    int op = gui.menuUsuario(); 
+    return op;
 }
 int Autenticacion::GUI_especialista(){
-    return 0;
+    GUI_ESPECIALISTA gui;
+    int op = gui.menuEspecialista(); 
+    return op;
 }

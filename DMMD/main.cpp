@@ -10,7 +10,7 @@ void agregarAdministradores(ListaDeCuentas &lista_cuentas);
 
 int main() {
     ListaDeCuentas lista_cuentas;
-    bool estado_inicio=false;
+    //bool estado_inicio=false;
     cuenta cuenta_actual;
     int id;
     string tipo_Cuenta;
@@ -23,11 +23,11 @@ int main() {
         int opcion_menu, opcion_menu_admin;;
         //Autenticacion Aut2;
         Autenticacion Aut;
-        estado_inicio=false;
-        
+        //estado_oinicio=false;
+
         switch(opcion)
-        {    
-            case 1: 
+        {
+            case 1:
                 id=Aut.iniciarSesion(lista_cuentas);
                 if (id!=0)
                 {
@@ -38,44 +38,255 @@ int main() {
                     lista_cuentas.obtenerCuenta(id, cuenta_actual);
                     //cout << "La cuenta encontrada es: " << endl;
                     //cuenta_actual.mostrarCuenta();
-                    tipo_Cuenta=cuenta_actual.gettipoCuenta();
-                    if (tipo_Cuenta=="1")
+                    tipo_Cuenta=cuenta_actual.gettipoCuenta();//Obtenemos el tipo de cuenta para acceder a su propio menu
+                    if (tipo_Cuenta == "1")
                     {
                         cout << "\t\t\tBienvenido usuario!" << endl;
-                        opcion_menu = Aut.GUI_usuario();
-                        
+                        do{
+                            opcion_menu = Aut.GUI_usuario();
+                            system("cls");
+                            switch(opcion_menu){
+
+                                case 1://Gestion de informacion
+
+                                    cout << "\t| 1: Ver informacion" << endl;
+                                    cout << "\t|-> Selecciona una opcion: ";
+                                    cin >> opcion_menu_admin;
+                                    if(opcion_menu_admin == 1){
+                                        cout << "\n\tVer mi informacion" << endl;
+                                        cuenta_actual.mostrarCuenta();
+                                        system("pause");
+                                    }
+                                break;
+                                case 2://Gestion de solicitudes
+                                    cout << "\t| 1: Visualizar solicitudes" << endl;
+                                    cout << "\t| 2: Enviar solicitud" << endl;
+                                    cout << "\t| 3: ELiminar solicitud" << endl;
+                                    cout << "\t|-> Selecciona una opcion: ";
+                                    cin >> opcion_menu_admin;
+                                    if(opcion_menu_admin == 1){
+                                        cout << "\n\tVisualizar solicitudes" << endl;
+                                        system("pause");
+                                    }
+                                    else if(opcion_menu_admin == 2){
+                                        cout << "\n\tEnviar solicitud" << endl;
+                                        system("pause");
+                                    }
+                                    else{
+                                        cout << "\n\tEliminar solicitud" << endl;
+                                        system("pause");
+                                    }
+                                break;
+                                case 3://Gestion de agenda
+                                    cout << "\t| 1: Visualizar agenda" << endl;
+                                    cout << "\t| 2: Buscar especialista" << endl;
+                                    cout << "\t|-> Selecciona una opcion: ";
+                                    cin >> opcion_menu_admin;
+                                    if(opcion_menu_admin == 1){
+                                        cout << "\n\tVisualizar lista de especialistas" << endl;
+                                        system("pause");
+                                    }
+                                    else{
+                                        cout << "\n\tBuscar un especialista" << endl;
+                                        system("pause");
+                                    }
+                                break;
+                                case 4://Gestion de publicaciones
+                                    cout << "\t| 1: Visualizar publicaciones" << endl;
+                                    cout << "\t| 2: Crear publicacion" << endl;
+                                    cout << "\t| 3: Seleccionar publicacion" << endl;
+                                    cout << "\t| 4: Eliminar publicacion" << endl;
+                                    cout << "\t| 5: Modificar publicacion" << endl;
+                                    cout << "\t|-> Selecciona una opcion: ";
+                                    cin >> opcion_menu_admin;
+                                break;
+                                case 5://Gestion de suscripcion
+                                    cout << "\t| 1: Cancelar suscripcion" << endl;
+                                    cout << "\t| 2: Ver informacion de suscripcion" << endl;
+                                    cout << "\t| 3: Realizar pago" << endl;;
+                                    cout << "\t|-> Selecciona una opcion: ";
+                                    cin >> opcion_menu_admin;
+                                break;
+                            }
+
+                        }while(opcion_menu < 5);
+
+
                     }
                     else if(tipo_Cuenta == "2")
                     {
                         cout << "\t\t\tBienvenido Empresa!" << endl;
-                        opcion_menu = Aut.GUI_empresa();
-                        
+                        do{
+                            opcion_menu = Aut.GUI_empresa();
+                            system("cls");
+                            switch(opcion_menu){
+
+                                case 1://Gestion de informacion
+                                    cout << "\t| 1: Ver informacion" << endl;
+                                    cout << "\t|-> Selecciona una opcion: ";
+                                    cin >> opcion_menu_admin;
+                                    if(opcion_menu_admin == 1){
+                                        cout << "\n\tVer mi informacion" << endl;
+                                        cuenta_actual.mostrarCuenta();
+                                        system("pause");
+                                    }
+                                break;
+                                case 2://Gestion de solicitudes
+                                    cout << "\t| 1: Visualizar solicitudes" << endl;
+                                    cout << "\t| 2: Enviar solicitud" << endl;
+                                    cout << "\t| 3: ELiminar solicitud" << endl;
+                                    cin >> opcion_menu_admin;
+                                    if(opcion_menu_admin == 1){
+                                        cout << "\n\tVisualizar solicitudes" << endl;
+                                        system("pause");
+                                    }
+                                    else if(opcion_menu_admin == 2){
+                                        cout << "\n\tEnviar solicitud" << endl;
+                                        system("pause");
+                                    }
+                                    else{
+                                        cout << "\n\tEliminar solicitud" << endl;
+                                        system("pause");
+                                    }
+                                break;
+                                case 3://Gestion de agenda
+                                    cout << "\t| 1: Visualizar agenda" << endl;
+                                    cout << "\t| 2: Buscar especialista" << endl;
+                                    cout << "\t|-> Selecciona una opcion: ";
+                                    cin >> opcion_menu_admin;
+                                    if(opcion_menu_admin == 1){
+                                        cout << "\n\tVisualizar lista de especialistas" << endl;
+                                        system("pause");
+                                    }
+                                    else{
+                                        cout << "\n\tBuscar un especialista" << endl;
+                                        system("pause");
+                                    }
+                                break;
+                                case 4://Gestion de publicaciones
+                                    cout << "\t| 1: Visualizar publicaciones" << endl;
+                                    cout << "\t| 2: Crear publicacion" << endl;
+                                    cout << "\t| 3: Seleccionar publicacion" << endl;
+                                    cout << "\t| 4: Eliminar publicacion" << endl;
+                                    cout << "\t| 5: Modificar publicacion" << endl;
+                                    cout << "\t|-> Selecciona una opcion: ";
+                                    cin >> opcion_menu_admin;
+                                break;
+                                case 5://Gestion de suscripcion
+                                    cout << "\t| 1: Cancelar suscripcion" << endl;
+                                    cout << "\t| 2: Ver informacion de suscripcion" << endl;
+                                    cout << "\t| 3: Realizar pago" << endl;;
+                                    cout << "\t|-> Selecciona una opcion: ";
+                                    cin >> opcion_menu_admin;
+                                break;
+                            }
+
+                        }while(opcion_menu < 5);
+
                     }
                     else if(tipo_Cuenta == "3")
                     {
                         cout << "\t\t\tBienvenido Especialista!" << endl;
-                        opcion_menu = Aut.GUI_especialista();
-                        
+                        do{
+                            opcion_menu = Aut.GUI_especialista();
+                            system("cls");
+                            switch(opcion_menu){
+
+                                case 1://Gestion de informacion
+                                    cout << "\t| 1: Ver informacion" << endl;
+                                    cout << "\t|-> Selecciona una opcion: ";
+                                    cin >> opcion_menu_admin;
+                                    if(opcion_menu_admin == 1){
+                                        cout << "\n\tVer mi informacion" << endl;
+                                        cuenta_actual.mostrarCuenta();
+                                        system("pause");
+                                    }
+                                break;
+                                case 2://Gestion de solicitudes
+                                    cout << "\t| 1: Visualizar solicitudes" << endl;
+                                    cout << "\t| 2: Enviar solicitud" << endl;
+                                    cout << "\t| 3: ELiminar solicitud" << endl;
+                                    cout << "\t|-> Selecciona una opcion: ";
+                                    cin >> opcion_menu_admin;
+                                    if(opcion_menu_admin == 1){
+                                        cout << "\n\tVisualizar solicitudes" << endl;
+                                        system("pause");
+                                    }
+                                    else if(opcion_menu_admin == 2){
+                                        cout << "\n\tEnviar solicitud" << endl;
+                                        system("pause");
+                                    }
+                                    else{
+                                        cout << "\n\tEliminar solicitud" << endl;
+                                        system("pause");
+                                    }
+                                break;
+                                case 3://Gestion de agenda
+                                    cout << "\t| 1: Visualizar agenda" << endl;
+                                    cout << "\t| 2: Buscar especialista" << endl;
+                                    cout << "\t|-> Selecciona una opcion: ";
+                                    cin >> opcion_menu_admin;
+                                    if(opcion_menu_admin == 1){
+                                        cout << "\n\tVisualizar lista de especialistas" << endl;
+                                        system("pause");
+                                    }
+                                    else{
+                                        cout << "\n\tBuscar un especialista" << endl;
+                                        system("pause");
+                                    }
+                                break;
+                                case 4://Gestion de publicaciones
+                                    cout << "\t| 1: Visualizar publicaciones" << endl;
+                                    cout << "\t| 2: Crear publicacion" << endl;
+                                    cout << "\t| 3: Seleccionar publicacion" << endl;
+                                    cout << "\t| 4: Eliminar publicacion" << endl;
+                                    cout << "\t| 5: Modificar publicacion" << endl;
+                                    cout << "\t|-> Selecciona una opcion: ";
+                                    cin >> opcion_menu_admin;
+                                break;
+                                case 5://Gestion de suscripcion
+                                    cout << "\t| 1: Cancelar suscripcion" << endl;
+                                    cout << "\t| 2: Ver informacion de suscripcion" << endl;
+                                    cout << "\t| 3: Realizar pago" << endl;;
+                                    cout << "\t|-> Selecciona una opcion: ";
+                                    cin >> opcion_menu_admin;
+                                break;
+                            }
+
+                        }while(opcion_menu < 5);
+
                     }
-                    else;//tipo_cuenta == 4
+                    else//tipo_cuenta == 4
                     {
                         cout << "\t\t\tBienvenido Administrador!" << endl;
                         do{
                             opcion_menu = Aut.GUI_administrador();
+                            system("cls");
                             switch(opcion_menu){
-                            
+
                                 case 1://Gestion de informacion
-                                    cout << "1: Modificar informacion" << endl;
-                                    cout << "2: Ver informacion" << endl;
+                                    cout << "\t| 1: Modificar informacion" << endl;
+                                    cout << "\t| 2: Ver informacion" << endl;
+                                    cout << "\t|-> Selecciona una opcion: ";
                                     cin >> opcion_menu_admin;
+                                    if(opcion_menu_admin == 1){
+                                        cout << "\n\tModificar mi informacion" << endl;
+                                        system("pause");
+                                    }
+                                    else if (opcion_menu_admin == 2){
+                                        cout << "\n\tVer mi informacion" << endl;
+                                        cuenta_actual.mostrarCuenta();
+                                        system("pause");
+                                    }
                                 break;
                                 case 2://Gestion de cuentas
-                                    cout << "1: Insertar" << endl;
-                                    cout << "2: Eliminar" << endl;
-                                    cout << "3: Modificar" << endl;
-                                    cout << "4: Visuzalir cuentas" << endl;
-                                    cout << "5: Buscar cuenta" << endl;
-                                    cout << "6: Obtener total de cuentas" << endl;
+                                    cout << "\t| 1: Insertar" << endl;
+                                    cout << "\t| 2: Eliminar" << endl;
+                                    cout << "\t| 3: Modificar" << endl;
+                                    cout << "\t| 4: Visuzalir cuentas" << endl;
+                                    cout << "\t| 5: Buscar cuenta" << endl;
+                                    cout << "\t| 6: Obtener total de cuentas" << endl;
+                                    cout << "\t|-> Selecciona una opcion: ";
                                     cin >> opcion_menu_admin;
                                     if(opcion_menu_admin == 4){
                                         cout << "\n\t---- Lista de cuentas ----" << endl;
@@ -83,22 +294,33 @@ int main() {
                                     }
                                 break;
                                 case 3://Gestion de agenda
-                                    cout << "1: Dar de alta" << endl;
-                                    cout << "2: Dar de baja" << endl;
-                                    cout << "3: Visualizar agenda" << endl;
-                                    cout << "4: Buscar especialista" << endl;
+                                    cout << "\t| 1: Dar de alta" << endl;
+                                    cout << "\t| 2: Dar de baja" << endl;
+                                    cout << "\t| 3: Visualizar agenda" << endl;
+                                    cout << "\t| 4: Buscar especialista" << endl;
+                                    cout << "\t|-> Selecciona una opcion: ";
                                     cin >> opcion_menu_admin;
                                 break;
                                 case 4://Gestion de publicaciones
-                                    cout << "1: Visualizar publicaciones" << endl;
-                                    cout << "2: Crear publicacion" << endl;
-                                    cout << "3: Seleccionar publicacion" << endl;
-                                    cout << "4: Eliminar publicacion" << endl;
-                                    cout << "5: Modificar publicacion" << endl;
+                                    cout << "\t| 1: Visualizar publicaciones" << endl;
+                                    cout << "\t| 2: Crear publicacion" << endl;
+                                    cout << "\t| 3: Seleccionar publicacion" << endl;
+                                    cout << "\t| 4: Eliminar publicacion" << endl;
+                                    cout << "\t| 5: Modificar publicacion" << endl;
+                                    cout << "\t|-> Selecciona una opcion: ";
+                                    cin >> opcion_menu_admin;
+                                break;
+                                case 5://Gestion de suscripcion
+                                    cout << "\t| 1: Visualizar publicaciones" << endl;
+                                    cout << "\t| 2: Crear publicacion" << endl;
+                                    cout << "\t| 3: Seleccionar publicacion" << endl;
+                                    cout << "\t| 4: Eliminar publicacion" << endl;
+                                    cout << "\t| 5: Modificar publicacion" << endl;
+                                    cout << "\t|-> Selecciona una opcion: ";
                                     cin >> opcion_menu_admin;
                                 break;
                             }
-                        
+
                         }while(opcion_menu < 5);
                     }
 
@@ -112,9 +334,9 @@ int main() {
                 }
             break;
             case 2:
-                
+
                 Aut.registrarse(lista_cuentas);
-            break;  
+            break;
         }
     }while(opcion!=3);
     system("cls");
