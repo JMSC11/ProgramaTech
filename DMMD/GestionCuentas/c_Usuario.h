@@ -1,3 +1,6 @@
+#include <iostream>
+#include <string>
+#include "cuenta.h"
 class c_Usuario : public cuenta{
     private:
     
@@ -6,7 +9,7 @@ class c_Usuario : public cuenta{
         void mostrarDatosUsuario();
 };
 
-c_Usuario(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, double telefono) : cuenta(nt id,  usuario,  password,  nombre,  tipoCuenta, it edad,  correo,  telefono){
+c_Usuario::c_Usuario(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, double telefono) : cuenta(id,  usuario,  password,  nombre,  tipoCuenta, edad,  correo,  telefono){
 
 }
 

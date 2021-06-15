@@ -1,3 +1,6 @@
+#include <iostream>
+#include <string>
+#include "cuenta.h"
 class c_Empresa : public cuenta{
     private:
         string nombreEmpresa;
@@ -12,7 +15,7 @@ class c_Empresa : public cuenta{
         void mostrarDatosEmpresa();
 };
 
-c_Empresa::c_Empresa(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, double telefono, string nombreEmpresa, string puesto ) : cuenta(nt id,  usuario,  password,  nombre,  tipoCuenta, it edad,  correo,  telefono){
+c_Empresa::c_Empresa(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, double telefono, string nombreEmpresa, string puesto ) : cuenta(id,  usuario,  password,  nombre,  tipoCuenta, edad,  correo,  telefono){
     c_Empresa::nombreEmpresa=nombreEmpresa;
     c_Empresa::puesto=puesto;
 }

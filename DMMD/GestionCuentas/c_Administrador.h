@@ -15,7 +15,7 @@ class c_Administrador : public cuenta
         void mostrarDatosAdmin();
 };
 
-c_Administrador::c_Administrador(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, double telefono, int numEmpleado) : cuenta(int id,  usuario,  password,  nombre,  tipoCuenta, it edad,  correo,  telefono){
+c_Administrador::c_Administrador(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, double telefono, int numEmpleado) : cuenta(id,  usuario,  password,  nombre,  tipoCuenta, edad,  correo,  telefono){
     c_Administrador::numEmpleado =numEmpleado;
 }
 

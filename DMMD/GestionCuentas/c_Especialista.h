@@ -1,3 +1,6 @@
+#include <iostream>
+#include <string>
+#include "cuenta.h"
 class c_Especialista : public cuenta{
     private:
         string areaEspecializacion;
@@ -12,7 +15,7 @@ class c_Especialista : public cuenta{
 
 };
 
-c_Especialista::c_Especialista(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, double telefono, string areaEspecializacion, int reputacion) : cuenta(nt id,  usuario,  password,  nombre,  tipoCuenta, it edad,  correo,  telefono){
+c_Especialista::c_Especialista(int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, double telefono, string areaEspecializacion, int reputacion) : cuenta(id,  usuario,  password,  nombre,  tipoCuenta, edad,  correo,  telefono){
     c_Especialista::areaEspecializacion;
     c_Especialista::reputacion;
 }
