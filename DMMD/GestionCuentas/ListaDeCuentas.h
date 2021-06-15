@@ -61,7 +61,7 @@ bool ListaDeCuentas::eliminar(cuenta c){
     return true;
 }
 
-void ListaDeCuentas::mostrar(string tipoCuenta){
+void ListaDeCuentas::mostrar(string tipoCuenta){ 
     list<cuenta>::iterator it = listaCuentas.begin();
     for(int i = 0; i < contCuentas; i++){
         cuenta c = *it;

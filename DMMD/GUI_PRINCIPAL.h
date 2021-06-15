@@ -1,5 +1,5 @@
 #include <iostream>
-#include "ListaDeCuentas.h"
+#include "GestionCuentas\ListaDeCuentas.h"
 #include <string>
 #include <conio.h>
 
@@ -10,25 +10,30 @@ using namespace std;
 
 class GUI_PRINCIPAL {
 private:
-    string usuario, password, contra;
-    int opcion;//NUEVO ATRIBUTO
 public: 
     GUI_PRINCIPAL();
-    int menuPrincipal();
+    void menuPrincipal();
 };
 
-GUI_PRINCIPAL::GUI_PRINCIPAL(){
 
+GUI_PRINCIPAL::GUI_PRINCIPAL(){
+    
 }
 // 
 // Menu principal del sistema
 // Permite iniciar sesion o registrarse
 // 
-int GUI_PRINCIPAL::menuPrincipal(){
+void GUI_PRINCIPAL::menuPrincipal(){
     
     int contador = 0;
     bool ingreso = false;
-    int menuP;
+    int menuP, id=0;
+    string usuario, password;
+    int menu2;
+    int edad;
+    double telefono;
+    ListaDeCuentas lCuentas;
+    string nombre, tipoCuenta, correo;
     cout << "\t| Bienvenido a DMMD |" << endl;
     cout << "" << endl;
 
@@ -38,7 +43,7 @@ int GUI_PRINCIPAL::menuPrincipal(){
         system("cls");
         cout << "Eliga la opcion del menu a continuacion \n1. Iniciar sesion\n2. Registrarse\n3. Salir" << endl;
         cin >> menuP;
-
+        
         switch (menuP)
         {
             case 1:
@@ -56,7 +61,6 @@ int GUI_PRINCIPAL::menuPrincipal(){
 
                 while (caracter != ENTER)
                 {
-                    contra.append(1, caracter);
                     if (caracter != ATRAS)
                     {
                         password.push_back(caracter);
@@ -73,6 +77,49 @@ int GUI_PRINCIPAL::menuPrincipal(){
                 caracter = getch();
                 }
             break;
+
+            case 2:
+                cout << "Tipo de cuenta a registrar" << endl;
+                cin >> menu2;
+                switch(menu2)
+                {
+                    case 1: //int id, string usuario, string password, string nombre, string tipoCuenta, int edad, string correo, double telefono
+                        id++; 
+                        system("cls");
+                        cin.ignore();
+                        cout << "\t\tTipo de cuenta Usuario\n\t\tFavor de ingresar los siguientes datos:" << endl;
+                        cout << "Usuario: ";
+                        getline(cin,usuario);
+                        cout << "\nContrase\244a: ";
+                        getline(cin,password);
+                        cout << "\nNombre: ";
+                        getline(cin,nombre);
+                        cout << "\nEdad: ";
+                        cin >>edad;
+                        cout << "\nCorreo: ";
+                        cin >> correo;
+                        cout << "\nTelefono: ";
+                        cin >>telefono;
+                        cuenta *c =  new cuenta(id, usuario, password, nombre, "1", edad, correo, telefono);
+                        lCuentas.registrar(c);
+                        lCuentas.mostrar("1");
+                        system("pause");
+                    break;
+
+                    /*default:
+                        cout << "Opcion no valida" << endl;
+                    break;*/
+                }
+
+            break;
+
+            case 3:
+                cout << "Sales" << endl;
+            break;
+
+            default:
+                cout << "opcion no valida" << endl;
+            break;
         }
-    }
+    }while(menuP!=3);
 }
