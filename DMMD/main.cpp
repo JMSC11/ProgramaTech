@@ -23,6 +23,7 @@ int main() {
         int opcion_menu, opcion_menu_admin;;
         //Autenticacion Aut2;
         Autenticacion Aut;
+        Informacion info;
         //estado_oinicio=false;
 
         switch(opcion)
@@ -54,7 +55,9 @@ int main() {
                                     cin >> opcion_menu_admin;
                                     if(opcion_menu_admin == 1){
                                         cout << "\n\tVer mi informacion" << endl;
-                                        cuenta_actual.mostrarCuenta();
+                                        
+                                        info.verInformacion(cuenta_actual);
+                                        //cuenta_actual.mostrarCuenta();
                                         system("pause");
                                     }
                                 break;
@@ -127,7 +130,8 @@ int main() {
                                     cin >> opcion_menu_admin;
                                     if(opcion_menu_admin == 1){
                                         cout << "\n\tVer mi informacion" << endl;
-                                        cuenta_actual.mostrarCuenta();
+                                        //cuenta_actual.mostrarCuenta();
+                                        info.verInformacion(cuenta_actual);
                                         system("pause");
                                     }
                                 break;
@@ -198,7 +202,8 @@ int main() {
                                     cin >> opcion_menu_admin;
                                     if(opcion_menu_admin == 1){
                                         cout << "\n\tVer mi informacion" << endl;
-                                        cuenta_actual.mostrarCuenta();
+                                        // cuenta_actual.mostrarCuenta();
+                                        info.verInformacion(cuenta_actual);
                                         system("pause");
                                     }
                                 break;
@@ -275,7 +280,8 @@ int main() {
                                     }
                                     else if (opcion_menu_admin == 2){
                                         cout << "\n\tVer mi informacion" << endl;
-                                        cuenta_actual.mostrarCuenta();
+                                        // cuenta_actual.mostrarCuenta();
+                                        info.verInformacion(cuenta_actual);
                                         system("pause");
                                     }
                                 break;

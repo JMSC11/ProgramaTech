@@ -30,7 +30,7 @@ int c_Administrador::getNumEmpleado(){
 void c_Administrador::mostrarDatosAdmin(){
     mostrarCuenta();
     cout<<getNumEmpleado();
-    
+
 }
 
 

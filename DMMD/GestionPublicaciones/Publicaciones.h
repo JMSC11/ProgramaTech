@@ -1,71 +1,28 @@
-#include <iostream>
-#include <string>
+#include "ListaDePublicaciones.h"
 using namespace std;
 
-class publicacion{
+class Publicaciones{
     private:
-        int idPublicacion;
-        string asunto;
-        string descripcion;
-        string nombrePropietario;
+        
     public:
-        publicacion();
-        publicacion(int, string, string, string );
-        ~publicacion();
-        int getIdPublicacion();
-        void setIdPublicacion(int id);
-        string getAsunto();
-        void setAsunto(string asunto);
-        string getDescripcion();
-        void setDescripcion(string descripcion);
-        string getNombrePropietario();
-        void setNombrePropietario(string nombre);
-        void mostrarPublicacion();
+        Publicaciones();
+        void verPublicaciones();
+        void crearPublicacion();
+        void seleccionarPublicacion();
+        void eliminarPublicacion();
+        void modificarPublicacion();
 };
 
-publicacion::publicacion(){
-
+Publicaciones::Publicaciones(){
 }
-publicacion::publicacion(int id, string asunto, string descripcion, string nombre){
-    publicacion::idPublicacion=id;
-    publicacion::asunto=asunto;
-    publicacion::descripcion=descripcion;
-    publicacion::nombrePropietario=nombre;
+void Publicaciones::verPublicaciones(){
 }
-publicacion::~publicacion(){
-
+void Publicaciones::crearPublicacion(){
 }
-
-int publicacion::getIdPublicacion(){
-    return idPublicacion;
+void Publicaciones::seleccionarPublicacion(){
 }
-void publicacion::setIdPublicacion(int id){
-    publicacion::idPublicacion = id;
+void Publicaciones::eliminarPublicacion(){
 }
-
-string publicacion::getAsunto(){
-    return asunto;
-}
-void publicacion::setAsunto(string asunto){
-    publicacion::asunto=asunto;
-}
-string publicacion::getDescripcion(){
-    return descripcion;
-}
-void publicacion::setDescripcion(string descripcion){
-    publicacion::descripcion=descripcion;
-}
-string publicacion::getNombrePropietario(){
-    return nombrePropietario;
-}
-void publicacion::setNombrePropietario(string nombre){
-    publicacion::nombrePropietario=nombre;
-}
-
-void publicacion::mostrarPublicacion(){
-    cout<<"Id publicacion: "<<idPublicacion<<endl;
-    cout<<"Propietario: "<<nombrePropietario<<endl;
-    cout<<"Asunto:: "<<asunto<<endl;
-    cout<<"Descripcion: "<<descripcion<<endl;
+void Publicaciones::modificarPublicacion(){
 }
 

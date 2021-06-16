@@ -2,6 +2,7 @@
 #include <conio.h>
 #include <stdlib.h>
 #include "..\GestionCuentas\ListaDeCuentas.h"
+#include "..\GestionDeInfo\Informacion.h"
 #include "GUI_ADMINISTRADOR.h"
 #include "GUI_USUARIO.h"
 #include "GUI_ESPECIALISTA.h"

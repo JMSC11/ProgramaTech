@@ -1,5 +1,4 @@
 #include <list>
-#include <vector>
 #include "cuenta.h"
 
 using namespace std;
@@ -7,7 +6,6 @@ using namespace std;
 class listaEspecialista{
     private:
         int numEspecialistas;
-        int* inicio;
         list<cuenta> listaEspec;
     public:
         listaEspecialista();
@@ -22,7 +20,6 @@ class listaEspecialista{
 listaEspecialista::listaEspecialista()
 {
 	numEspecialistas = 0;
-	inicio=0;
 }
 
 void listaEspecialista::agregar(cuenta especialista)
@@ -41,3 +38,10 @@ void listaEspecialista::mostrar()
         it++;
     }
 }
+void listaEspecialista::actualizar(){
+}
+vois listaEspecialista::buscar(){
+}
+void listaEspecialista::eliminar(){
+}
+    

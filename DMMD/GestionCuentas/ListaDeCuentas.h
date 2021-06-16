@@ -1,6 +1,6 @@
 #include <list>
 #include "cuenta.h"
-
+// #include "..\GestionDeInfo\Informacion.h"
 class ListaDeCuentas {
 private:
     int contCuentas;
