@@ -321,7 +321,7 @@ int main() {
                                     cout << "\t| 1: Insertar" << endl;
                                     cout << "\t| 2: Eliminar" << endl;
                                     cout << "\t| 3: Modificar" << endl;
-                                    cout << "\t| 4: Visuzalir cuentas" << endl;
+                                    cout << "\t| 4: Visualizar cuentas" << endl;
                                     cout << "\t| 5: Buscar cuenta" << endl;
                                     cout << "\t| 6: Obtener total de cuentas" << endl;
                                     cout << "\t|-> Selecciona una opcion: ";
