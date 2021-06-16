@@ -82,11 +82,11 @@ void Autenticacion::registrarse(ListaDeCuentas &lista)
     system("cls");
     cin.ignore();
     
-    cout << "Seleccione un tipo de cuenta" << endl;
+    
     cout << "1: Usuario normal" << endl;
     cout << "2: Empresa" << endl;
     cout << "3: Especialista" << endl;
-
+cout << "Seleccione un tipo de cuenta: ";
     getline(cin,tipoCuenta);
     system("cls");
     cout << "\t\tFavor de ingresar los siguientes datos:" << endl;

@@ -59,6 +59,7 @@ int main() {
                                         info.verInformacion(cuenta_actual);
                                         //cuenta_actual.mostrarCuenta();
                                         system("pause");
+                                        system("cls");
                                     }
                                 break;
                                 case 2://Gestion de solicitudes
@@ -70,14 +71,17 @@ int main() {
                                     if(opcion_menu_admin == 1){
                                         cout << "\n\tVisualizar solicitudes" << endl;
                                         system("pause");
+                                        system("cls");
                                     }
                                     else if(opcion_menu_admin == 2){
                                         cout << "\n\tEnviar solicitud" << endl;
                                         system("pause");
+                                        system("cls");
                                     }
                                     else{
                                         cout << "\n\tEliminar solicitud" << endl;
                                         system("pause");
+                                        system("cls");
                                     }
                                 break;
                                 case 3://Gestion de agenda
@@ -88,10 +92,12 @@ int main() {
                                     if(opcion_menu_admin == 1){
                                         cout << "\n\tVisualizar lista de especialistas" << endl;
                                         system("pause");
+                                        system("cls");
                                     }
                                     else{
                                         cout << "\n\tBuscar un especialista" << endl;
                                         system("pause");
+                                        system("cls");
                                     }
                                 break;
                                 case 4://Gestion de publicaciones
@@ -102,6 +108,8 @@ int main() {
                                     cout << "\t| 5: Modificar publicacion" << endl;
                                     cout << "\t|-> Selecciona una opcion: ";
                                     cin >> opcion_menu_admin;
+                                    system("pause");
+                                    system("cls");
                                 break;
                                 case 5://Gestion de suscripcion
                                     cout << "\t| 1: Cancelar suscripcion" << endl;
@@ -109,6 +117,8 @@ int main() {
                                     cout << "\t| 3: Realizar pago" << endl;;
                                     cout << "\t|-> Selecciona una opcion: ";
                                     cin >> opcion_menu_admin;
+                                    system("pause");
+                                    system("cls");
                                 break;
                             }
 
@@ -133,6 +143,7 @@ int main() {
                                         //cuenta_actual.mostrarCuenta();
                                         info.verInformacion(cuenta_actual);
                                         system("pause");
+                                        system("cls");
                                     }
                                 break;
                                 case 2://Gestion de solicitudes
@@ -143,14 +154,17 @@ int main() {
                                     if(opcion_menu_admin == 1){
                                         cout << "\n\tVisualizar solicitudes" << endl;
                                         system("pause");
+                                        system("cls");
                                     }
                                     else if(opcion_menu_admin == 2){
                                         cout << "\n\tEnviar solicitud" << endl;
                                         system("pause");
+                                        system("cls");
                                     }
                                     else{
                                         cout << "\n\tEliminar solicitud" << endl;
                                         system("pause");
+                                        system("cls");
                                     }
                                 break;
                                 case 3://Gestion de agenda
@@ -161,10 +175,12 @@ int main() {
                                     if(opcion_menu_admin == 1){
                                         cout << "\n\tVisualizar lista de especialistas" << endl;
                                         system("pause");
+                                        system("cls");
                                     }
                                     else{
                                         cout << "\n\tBuscar un especialista" << endl;
                                         system("pause");
+                                        system("cls");
                                     }
                                 break;
                                 case 4://Gestion de publicaciones
@@ -175,6 +191,8 @@ int main() {
                                     cout << "\t| 5: Modificar publicacion" << endl;
                                     cout << "\t|-> Selecciona una opcion: ";
                                     cin >> opcion_menu_admin;
+                                    system("pause");
+                                    system("cls");
                                 break;
                                 case 5://Gestion de suscripcion
                                     cout << "\t| 1: Cancelar suscripcion" << endl;
@@ -182,6 +200,8 @@ int main() {
                                     cout << "\t| 3: Realizar pago" << endl;;
                                     cout << "\t|-> Selecciona una opcion: ";
                                     cin >> opcion_menu_admin;
+                                    system("pause");
+                                    system("cls");
                                 break;
                             }
 
@@ -205,6 +225,7 @@ int main() {
                                         // cuenta_actual.mostrarCuenta();
                                         info.verInformacion(cuenta_actual);
                                         system("pause");
+                                        system("cls");
                                     }
                                 break;
                                 case 2://Gestion de solicitudes
@@ -216,14 +237,17 @@ int main() {
                                     if(opcion_menu_admin == 1){
                                         cout << "\n\tVisualizar solicitudes" << endl;
                                         system("pause");
+                                        system("cls");
                                     }
                                     else if(opcion_menu_admin == 2){
                                         cout << "\n\tEnviar solicitud" << endl;
                                         system("pause");
+                                        system("cls");
                                     }
                                     else{
                                         cout << "\n\tEliminar solicitud" << endl;
                                         system("pause");
+                                        system("cls");
                                     }
                                 break;
                                 case 3://Gestion de agenda
@@ -234,10 +258,12 @@ int main() {
                                     if(opcion_menu_admin == 1){
                                         cout << "\n\tVisualizar lista de especialistas" << endl;
                                         system("pause");
+                                        system("cls");
                                     }
                                     else{
                                         cout << "\n\tBuscar un especialista" << endl;
                                         system("pause");
+                                        system("cls");
                                     }
                                 break;
                                 case 4://Gestion de publicaciones
@@ -248,6 +274,8 @@ int main() {
                                     cout << "\t| 5: Modificar publicacion" << endl;
                                     cout << "\t|-> Selecciona una opcion: ";
                                     cin >> opcion_menu_admin;
+                                    system("pause");
+                                    system("cls");
                                 break;
                                 case 5://Gestion de suscripcion
                                     cout << "\t| 1: Cancelar suscripcion" << endl;
@@ -255,6 +283,8 @@ int main() {
                                     cout << "\t| 3: Realizar pago" << endl;;
                                     cout << "\t|-> Selecciona una opcion: ";
                                     cin >> opcion_menu_admin;
+                                    system("pause");
+                                    system("cls");
                                 break;
                             }
 
@@ -277,12 +307,14 @@ int main() {
                                     if(opcion_menu_admin == 1){
                                         cout << "\n\tModificar mi informacion" << endl;
                                         system("pause");
+                                        system("cls");
                                     }
                                     else if (opcion_menu_admin == 2){
                                         cout << "\n\tVer mi informacion" << endl;
                                         // cuenta_actual.mostrarCuenta();
                                         info.verInformacion(cuenta_actual);
                                         system("pause");
+                                        system("cls");
                                     }
                                 break;
                                 case 2://Gestion de cuentas
@@ -298,6 +330,8 @@ int main() {
                                         cout << "\n\t---- Lista de cuentas ----" << endl;
                                         lista_cuentas.mostrar("1");
                                     }
+                                    system("pause");
+                                    system("cls");
                                 break;
                                 case 3://Gestion de agenda
                                     cout << "\t| 1: Dar de alta" << endl;
@@ -306,6 +340,8 @@ int main() {
                                     cout << "\t| 4: Buscar especialista" << endl;
                                     cout << "\t|-> Selecciona una opcion: ";
                                     cin >> opcion_menu_admin;
+                                    system("pause");
+                                    system("cls");
                                 break;
                                 case 4://Gestion de publicaciones
                                     cout << "\t| 1: Visualizar publicaciones" << endl;
@@ -315,6 +351,8 @@ int main() {
                                     cout << "\t| 5: Modificar publicacion" << endl;
                                     cout << "\t|-> Selecciona una opcion: ";
                                     cin >> opcion_menu_admin;
+                                    system("pause");
+                                    system("cls");
                                 break;
                                 case 5://Gestion de suscripcion
                                     cout << "\t| 1: Visualizar publicaciones" << endl;
@@ -324,6 +362,8 @@ int main() {
                                     cout << "\t| 5: Modificar publicacion" << endl;
                                     cout << "\t|-> Selecciona una opcion: ";
                                     cin >> opcion_menu_admin;
+                                    system("pause");
+                                    system("cls");
                                 break;
                             }
 
